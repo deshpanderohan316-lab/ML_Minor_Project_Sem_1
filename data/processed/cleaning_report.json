@@ -1,0 +1,71 @@
+{
+  "raw_shapes": {
+    "matches": [
+      1095,
+      20
+    ],
+    "Match_dataset": [
+      1243,
+      14
+    ],
+    "deliveries": [
+      260920,
+      17
+    ]
+  },
+  "team_name_cells_changed_match_dataset": 1166,
+  "team_name_cells_changed_matches_csv": 1166,
+  "venues_match_dataset": {
+    "raw_venue_names": 60,
+    "canonical_venues": 36,
+    "city_values_changed_or_filled": 214
+  },
+  "venues_matches_csv": {
+    "raw_venue_names": 58,
+    "canonical_venues": 36,
+    "city_values_changed_or_filled": 210
+  },
+  "shared_matches_cross_checked": 1095,
+  "match_type_rule_validation": {
+    "years": [
+      2019,
+      2024
+    ],
+    "accuracy": 1.0,
+    "matches_checked": 399
+  },
+  "match_type_inferred_rows": 148,
+  "outcomes": {
+    "normal": 1218,
+    "tie": 16,
+    "no_result": 9
+  },
+  "lineup_size_counts": {
+    "11": 1929,
+    "12": 551,
+    "13": 6
+  },
+  "team_name_cells_changed_deliveries": 142398,
+  "overs_with_more_than_6_legal_balls": {
+    "overs": 28,
+    "matches": 27
+  },
+  "target_runs_mismatches_explained_by_DL": 21,
+  "deliveries": {
+    "raw_rows": 260920,
+    "regular_rows": 260759,
+    "super_over_rows": 161,
+    "super_over_matches": 14
+  },
+  "players": {
+    "in_2008_24_lineups_not_in_deliveries": 4,
+    "in_2025_26_lineups": 261,
+    "in_2025_26_lineups_without_history": 75
+  },
+  "player_name_review_groups": 34,
+  "outputs": {
+    "matches_clean": 1243,
+    "matches_model": 1234,
+    "deliveries_clean": 260759
+  }
+}

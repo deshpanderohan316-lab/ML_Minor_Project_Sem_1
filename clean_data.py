@@ -277,7 +277,13 @@ def resolve_outcomes(df: pd.DataFrame, m_std: pd.DataFrame, report: dict) -> pd.
          df.loc[decided, "winner_final"].eq(df.loc[decided, "team2"])
     assert ok.all(), "winner is neither team1 nor team2 for some match"
 
-    df["team1_won"] = pd.array(np.where(decided, df["winner_final"].eq(df["team1"]), np.nan), dtype="Int8")
+    df["team1_won"] = pd.array(
+    [
+        int(w == t1) if pd.notna(w) and pd.notna(t1) else pd.NA
+        for w, t1 in zip(df["winner_final"], df["team1"])
+    ],
+    dtype="Int8")
+
     df["is_usable"] = df["outcome_type"].ne("no_result")
     df["batting_first"] = np.where(df["toss_decision"].eq("bat"), df["toss_winner"],
                                    np.where(df["toss_winner"].eq(df["team1"]), df["team2"], df["team1"]))
